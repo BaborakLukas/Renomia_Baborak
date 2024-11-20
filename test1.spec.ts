@@ -25,10 +25,11 @@ import { chromium } from 'playwright';
     // Submit the form
     await page.waitForSelector('[data-testid="car-calculator-cta-desktop"]');
     await page.click('[data-testid="car-calculator-cta-desktop"]');
-    await page.waitForSelector('text=Vaše vozidlo')
-    console.log('Form submitted and checked');
+    console.log('Form submitted');
 
-    // Wait for 3 seconds
+    // Check and wait for 3 seconds
+    await page.waitForSelector('text=Vaše vozidlo');
+    console.log('Checked')
     await page.waitForTimeout(3000);
 
   } catch (error) {
