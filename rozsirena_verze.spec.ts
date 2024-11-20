@@ -25,7 +25,7 @@ import { chromium } from 'playwright';
     // Submit the form
     await page.waitForSelector('[data-testid="car-calculator-cta-desktop"]');
     await page.click('[data-testid="car-calculator-cta-desktop"]');
-    await page.waitForSelector('text=Vaše vozidlo')
+    await page.waitForSelector('text=9AR0175')
     console.log('Form submitted and checked');
 
     // Wait for the "Úprava vozidla" button and click it
